@@ -1,11 +1,32 @@
 #include <stdio.h>
 #include <math.h>
 
-int areaOfCircle(int smaller, int larger) 
+int add(int smaller, int larger) 
 {
   int solution = (smaller + larger);
   return solution;
 }
+
+int sub(int smaller, int larger) 
+{
+  int solution = (smaller - larger);
+  return solution;
+}
+
+int mult(int smaller, int larger) 
+{
+  int solution = (smaller * larger);
+  return solution;
+}
+
+float div(int smaller, float larger)     //we need the second to be float for it to work
+{
+  float solution = (smaller / larger);
+  return solution;
+}
+
+
+
 
 //
 // Simple program which requires two integer inputs on the command line 
@@ -39,8 +60,17 @@ int main(int argc, char* argv[])
   }
 
 
-int solution = areaOfCircle(smaller, larger);
-printf("The solution is %d\n", solution);
+int addition = add(smaller, larger);
+printf("%d + %d is equal to %d\n", smaller, larger, addition);
+
+int subtraction = sub(smaller, larger);
+printf("%d - %d is equal to %d\n", smaller, larger, subtraction);
+
+int multiplication = mult(smaller, larger);
+printf("%d x %d is equal to %d\n", smaller, larger, multiplication);
+
+float division = div(smaller, larger);
+printf("%d / %d is equal to %f\n", smaller, larger, division);
 
 }
   
