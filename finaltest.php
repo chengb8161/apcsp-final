@@ -7,8 +7,8 @@
 
   <body>
 
-    <h1>Final Project Test 1.2</h1>
-    <p>Changes:<br>Added other simple functions, it will add, subtract, multiply and divide them at one time when you press go.</p>
+    <h1>Final Project Test v1.3</h1>
+    <p>Changes:<br>Added a third input box</p>
 
     <?php
        // define variables and set to empty values
