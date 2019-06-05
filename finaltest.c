@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-
+#include <string.h>
 
 float add(float smaller, float larger) 
 {
@@ -51,11 +51,11 @@ int main(int argc, char* argv[])
   int found = sscanf(argv[1], "%f", &smaller);
   if (found != 1)
   {
-    printf("first arg is not an integer, enter two floats\n");
+    printf("first arg is not an float, enter two floats\n");
     return 1;
   }
-  char operation;
-  found = sscanf(argv[2], "%c", &operation);
+  char operation[2];
+  found = sscanf(argv[2], "%s", operation);
   if (found != 1)
   {
     printf("Operation is not a character. Enter a character in arg2.\n");
@@ -64,37 +64,38 @@ int main(int argc, char* argv[])
   found = sscanf(argv[3], "%f", &larger);
   if (found != 1)
   {
-    printf("second arg is not an integer, enter two floats\n");
+    printf("second arg is not an float, enter two floats\n");
     return 1;
   }
-if (strcmp((operation, "+") == 0))
+char plus[2] = "+";
+char minus[2] = "-";
+char times[2] = "x";
+char over[2] = "/";
+char power[2] = "^";
+if (strcmp(operation, plus) == 0)
   {
     float addition = add(smaller, larger);
     printf("%f + %f is equal to %f\n", smaller, larger, addition);
   }
-
-if (strcmp((operation, "-") == 0))
+if (strcmp(operation, minus) == 0)
   {
     float subtraction = sub(smaller, larger);
     printf("%f - %f is equal to %f\n", smaller, larger, subtraction);
   }
-
-if (strcmp((operation, "*") == 0))
+if (strcmp(operation, times) == 0)
   {
     float multiplication = mult(smaller, larger);
     printf("%f x %f is equal to %f\n", smaller, larger, multiplication);
   }
-
-if (strcmp((operation, "/") == 0))
+if (strcmp(operation, over) == 0)
   {
     float division = div(smaller, larger);
     printf("%f / %f is equal to %f\n", smaller, larger, division);
   }
-
-if (strcmp((operation, "^") == 0))
+if (strcmp(operation, power) == 0)
   {
     float exponents = exponent(smaller, larger);
     printf("%f ^ %f is equal to %f\n", smaller, larger, exponents);
   }
 }
-  
+
