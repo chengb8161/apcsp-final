@@ -8,7 +8,7 @@
   <body>
 
     <h1>Final Project Test v1.3</h1>
-    <p>Changes:<br>Added a third input box</p>
+    <p>Changes:<br>New program</p>
 
     <?php
        // define variables and set to empty values
@@ -17,7 +17,7 @@
          $arg1 = test_input($_POST["arg1"]);
          $arg2 = test_input($_POST["arg2"]);
          $arg3 = test_input($_POST["arg3"]);
-         exec("/usr/lib/cgi-bin/sp1b/finaltest " . $arg1 . " " . $arg2, $arg3, $output, $retc); 
+         exec("/usr/lib/cgi-bin/sp1a/finaltest " . $arg1 . " " . $arg2 . " " . $arg3, $output, $retc); 
        }
        function test_input($data) {
          $data = trim($data);
