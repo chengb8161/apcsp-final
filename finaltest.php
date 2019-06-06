@@ -7,8 +7,8 @@
 
   <body>
 
-    <h1>Final Project Test v1.3</h1>
-    <p>Changes:<br>New program</p>
+    <h1>Final Project Test v1.4</h1>
+    <p>Changes:<br>The calculator works now. <br> Use "+" to add, "-" to subtract, "x" to multiply, "/" to divide and "^" to raise a number to a power.</p>
 
     <?php
        // define variables and set to empty values
@@ -28,11 +28,11 @@
     ?>
 
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-      Input 1: <input type="text" name="arg1"><br>
-      Input 2: <input type="text" name="arg2"><br>
-      Input 3: <input type="text" name="arg3"><br>
+      Number: <input type="text" name="arg1"><br>
+      Operation: <input type="text" name="arg2"><br>
+      Number: <input type="text" name="arg3"><br>
       <br>
-      <input type="submit" value="Go!">
+      <input type="submit" value="Calculate!">
     </form>
 
     <?php
