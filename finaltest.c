@@ -82,23 +82,35 @@ if (strcmp(operation, plus) == 0)
   }
 if (strcmp(operation, minus) == 0)
   {
-    float subtraction = sub(smaller, larger);
-    printf("%f - %f is equal to %f\n", smaller, larger, subtraction);
+    for (int i = 0; i < 5; i++) {
+      float subtraction = sub(smaller, larger);
+      printf("%f - %f is equal to %f\n", smaller, larger, subtraction);
+      larger++;
+    }
   }
 if (strcmp(operation, times) == 0)
   {
-    float multiplication = mult(smaller, larger);
-    printf("%f x %f is equal to %f\n", smaller, larger, multiplication);
+    for (int i = 0; i < 5; i++) {
+      float multiplication = mult(smaller, larger);
+      printf("%f x %f is equal to %f\n", smaller, larger, multiplication);
+      larger++;
+    }
   }
 if (strcmp(operation, over) == 0)
   {
-    float division = div(smaller, larger);
-    printf("%f / %f is equal to %f\n", smaller, larger, division);
-  }
+    for (int i = 0; i < 5; i++) {
+      float division = div(smaller, larger);
+      printf("%f / %f is equal to %f\n", smaller, larger, division);
+      larger++;
+    }
+   }
 if (strcmp(operation, power) == 0)
   {
-    float exponents = exponent(smaller, larger);
-    printf("%f ^ %f is equal to %f\n", smaller, larger, exponents);
-  }
+    for (int i = 0; i < 5; i++) {
+      float exponents = exponent(smaller, larger);
+      printf("%f ^ %f is equal to %f\n", smaller, larger, exponents);
+      larger++;
+    }
+   }
 }
 
