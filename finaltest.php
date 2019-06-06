@@ -12,12 +12,13 @@
 
     <?php
        // define variables and set to empty values
-       $arg1 = $arg2 = $arg3 = $output = $retc = "";
+       $arg1 = $arg2 = $arg3 = $arg4 = $output = $retc = "";
        if ($_SERVER["REQUEST_METHOD"] == "POST") {
          $arg1 = test_input($_POST["arg1"]);
          $arg2 = test_input($_POST["arg2"]);
          $arg3 = test_input($_POST["arg3"]);
-         exec("/usr/lib/cgi-bin/sp1a/finaltest " . $arg1 . " " . $arg2 . " " . $arg3, $output, $retc); 
+         $arg4 = test_input($_POST["arg4"]);
+         exec("/usr/lib/cgi-bin/sp1a/finaltest " . $arg1 . " " . $arg2 . " " . $arg3 . " " . $arg4, $output, $retc); 
        }
        function test_input($data) {
          $data = trim($data);
@@ -31,6 +32,7 @@
       Number: <input type="text" name="arg1"><br>
       Operation: <input type="text" name="arg2"><br>
       Number: <input type="text" name="arg3"><br>
+      Iterate? (Y/N): <input type="text" name="arg4"><br>
       <br>
       <input type="submit" value="Calculate!">
     </form>
@@ -44,6 +46,8 @@
          echo $arg2;
          echo "<br>";
          echo $arg3;
+         echo "<br>";
+         echo $arg4;
          echo "<br>";
        
          echo "<h2>Program Output (an array):</h2>";
