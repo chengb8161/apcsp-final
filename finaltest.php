@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Calculator</title>
+    <title>Function Calculator</title>
   </head>
 
 
   <body>
 
-    <h1>Final Project Test v1.4</h1>
-    <p>Changes:<br>The calculator works now. <br> Use "+" to add, "-" to subtract, "x" to multiply, "/" to divide and "^" to raise a number to a power.</p>
+    <h1>Final Project Test v1.5</h1>
+    <p>Changes:<br>The calculator works now. <br> Use "+" to add, "-" to subtract, "x" to multiply, "/" to divide and "^" to raise a number to a power.<br> The calculator is now a function calculator.</p>
 
     <?php
        // define variables and set to empty values
