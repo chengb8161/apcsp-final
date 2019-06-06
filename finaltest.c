@@ -74,8 +74,11 @@ char over[2] = "/";
 char power[2] = "^";
 if (strcmp(operation, plus) == 0)
   {
-    float addition = add(smaller, larger);
-    printf("%f + %f is equal to %f\n", smaller, larger, addition);
+    for (int i = 0; i < 5; i++) {
+      float addition = add(smaller, larger);
+      printf("%f + %f is equal to %f\n", smaller, larger, addition);
+      larger++;
+      }
   }
 if (strcmp(operation, minus) == 0)
   {
